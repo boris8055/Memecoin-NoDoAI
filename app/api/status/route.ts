@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
         currency: 'USDC',
         claimed,
         winner: winner ? {
-          address: `${winner.address.slice(0, 6)}...${winner.address.slice(-4)}`,
+          address: `${winner.winner.slice(0, 6)}...${winner.winner.slice(-4)}`,
           timestamp: winner.timestamp,
           txHash: winner.txHash,
         } : null,
