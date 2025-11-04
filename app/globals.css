@@ -12,7 +12,7 @@
   }
   
   body {
-    @apply bg-[#1a0033] text-white;
+    @apply bg-retro-bg text-white;
     font-family: 'Courier New', monospace;
     overflow-x: hidden;
   }
@@ -52,16 +52,16 @@
   /* Retro button */
   .retro-btn {
     @apply px-6 py-3 font-bold uppercase tracking-wider;
-    @apply border-4 border-[var(--neon-cyan)] bg-transparent text-[var(--neon-cyan)];
-    @apply hover:bg-[var(--neon-cyan)] hover:text-black;
+    @apply border-4 border-neon-cyan bg-transparent text-neon-cyan;
+    @apply hover:bg-neon-cyan hover:text-black;
     @apply transition-all duration-200;
-    @apply shadow-[0_0_10px_var(--neon-cyan)];
     position: relative;
     clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow: 0 0 10px theme('colors.neon.cyan');
   }
   
   .retro-btn:hover {
-    box-shadow: 0 0 20px var(--neon-cyan), inset 0 0 20px var(--neon-cyan);
+    box-shadow: 0 0 20px theme('colors.neon.cyan'), inset 0 0 20px theme('colors.neon.cyan');
   }
   
   /* Glitch text */
@@ -91,11 +91,11 @@
   }
   
   .chat-bubble.user {
-    @apply border-[var(--neon-pink)] text-[var(--neon-pink)];
+    @apply border-neon-pink text-neon-pink;
   }
   
   .chat-bubble.ai {
-    @apply border-[var(--neon-cyan)] text-[var(--neon-cyan)];
+    @apply border-neon-cyan text-neon-cyan;
   }
   
   /* Pixel corners */
@@ -145,10 +145,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--neon-cyan);
+  background: theme('colors.neon.cyan');
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-pink);
+  background: theme('colors.neon.pink');
 }
